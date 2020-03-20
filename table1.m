@@ -22,7 +22,6 @@ opts = setvaropts(opts, "ProcessCharacteristic1", "ThousandsSeparator", ",");
 % Import the data
 bmw1 = readtable("C:\Users\User\Documents\MATLAB\mdm3\bmw1.csv", opts);
 
-data = sortrows(bmw1);
 %% Clear temporary variables
 clear opts
 
@@ -30,4 +29,7 @@ clear opts
 indices = strcmp(bmw1.Repaircharacteristic1,'b');
 bmw1(indices,:) = [];
 
+indices1 = isnan(bmw1.ProductID);
+bmw1(indices1,:) = [];
 
+data = sortrows(bmw1);
