@@ -5,4 +5,4 @@
 - mini_data3 is mini_data but has been adapted to run with python 3
 
 
-- mini_data2 is new main one
+- mini_data3 is new main one
